@@ -1,0 +1,32 @@
+### Find All Projects
+GET http://localhost:8080/api/public/projects?page=0&size=10&direction=asc&sort=title
+
+### Get Project by ID
+GET http://localhost:8080/api/public/projects/{id}
+
+### Add new Project
+POST http://localhost:8080/api/private/projects/add
+Content-Type: application/json
+
+{
+    "id": 1,
+    "title": "Test Project",
+    "stage": "CONCEPTION",
+    "display": false,
+    "url": null
+}
+
+### Update existing Project
+PUT http://localhost:8080/api/projects/{id}
+Content-Type: application/json
+
+{
+    "id": 1,
+    "title": "Updated Test Project",
+    "stage": "CONCEPTION",
+    "display": false,
+    "url": null
+}
+
+### Delete Project
+DELETE http://localhost:8080/api/projects/{id}
